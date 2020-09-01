@@ -14,7 +14,7 @@ import com.example.myapplication.login
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.slide_page.*
 
-class AppIntroScreen : AppCompatActivity(), View.OnClickListener {
+class AppIntroScreen : BaseActivity(), View.OnClickListener {
 
     val mResources = intArrayOf(R.drawable.picture1, R.drawable.picture2, R.drawable.picture3)
     lateinit var adapter: SlidingPagerAdapter
@@ -23,7 +23,7 @@ class AppIntroScreen : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.slide_page)
+        layoutid(R.layout.slide_page)
 
         tabCount = mResources.size
         adapter = SlidingPagerAdapter(supportFragmentManager, mResources)

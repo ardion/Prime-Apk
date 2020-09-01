@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/background"
     tools:context=".formActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,7 +32,9 @@
         android:hint="Name"
         android:layout_below="@id/tw_bio"
         android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
         />
 
     <EditText
@@ -41,7 +43,10 @@
         android:layout_height="wrap_content"
         android:hint="Sex"
         android:layout_below="@id/et_name"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -50,7 +55,10 @@
         android:layout_height="wrap_content"
         android:hint="Birth of date"
         android:layout_below="@id/et_sex"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -59,7 +67,10 @@
         android:layout_height="wrap_content"
         android:hint="Birth of place"
         android:layout_below="@id/et_BD"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -68,7 +79,10 @@
         android:layout_height="wrap_content"
         android:hint="Job"
         android:layout_below="@id/et_BP"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
         />
 
 
@@ -78,7 +92,10 @@
         android:layout_height="wrap_content"
         android:hint="Address"
         android:layout_below="@id/et_job"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -87,7 +104,10 @@
         android:layout_height="wrap_content"
         android:hint="Phone number"
         android:layout_below="@id/et_address"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
         />
 
     <Button

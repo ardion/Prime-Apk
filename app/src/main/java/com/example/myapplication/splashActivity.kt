@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 
-class splashActivity : AppCompatActivity() {
-    lateinit var handler: Handler
+class splashActivity : BaseActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        layoutid(R.layout.activity_splash)
 
-        handler= Handler()
+        var handler=Handler()
         handler.postDelayed({
             val intentt = Intent(this, AppIntroScreen::class.java)
             startActivity(intentt)
@@ -19,4 +19,6 @@ class splashActivity : AppCompatActivity() {
         }, 3000)
 
     }
+
+
 }

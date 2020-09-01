@@ -3,50 +3,65 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
-class formActivity : AppCompatActivity() {
+class formActivity : BaseActivity() {
+
+    var nameEt: TextView? = null
+    var sexEt: TextView? = null
+    var jobEt: TextView? = null
+    var numberEt: TextView? = null
+    var bdEt: TextView? = null
+    var bpEt: TextView? = null
+    var adrEt: TextView? = null
+    var saveBtn: Button? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_form)
+        layoutid(R.layout.activity_form)
+        findviews()
+        initlisteners()
+    }
 
 
-        val nameEt= findViewById<TextView>(R.id.et_name)
-        val sexEt= findViewById<TextView>(R.id.et_sex)
-        val jobEt=findViewById<TextView>(R.id.et_job)
-
-        val numberEt= findViewById<TextView>(R.id.et_HP)
-        val bdEt= findViewById<TextView>(R.id.et_BD)
-        val bpEt=findViewById<TextView>(R.id.et_BP)
-        val adrEt=findViewById<TextView>(R.id.et_address)
-        val saveBtn=findViewById<TextView>(R.id.btnSave)
-
-
-        saveBtn.setOnClickListener {
-            //get text from edittexts
-            val name = nameEt.text.toString()
-            val sex = sexEt.text.toString()
-            val job = jobEt.text.toString()
-            val number = numberEt.text.toString()
-            val bd = bdEt.text.toString()
-            val bp = bpEt.text.toString()
-            val adr = adrEt.text.toString()
+    override fun findviews() {
+        nameEt = findViewById(R.id.et_name)
+        sexEt = findViewById(R.id.et_sex)
+        jobEt = findViewById(R.id.et_job)
+        numberEt = findViewById(R.id.et_HP)
+        bdEt = findViewById(R.id.et_BD)
+        bpEt = findViewById(R.id.et_BP)
+        adrEt = findViewById(R.id.et_address)
+        saveBtn = findViewById(R.id.btnSave)
+    }
 
 
-            //intent to start activity
+    override fun initlisteners() {
+        saveBtn?.setOnClickListener {
 
-            val intent = Intent(this, profilActivity::class.java)
-            intent.putExtra("Name", "$name")
-            intent.putExtra("Sex", sex)
-            intent.putExtra("Job", job)
-            intent.putExtra("Number", number)
-            intent.putExtra("Bdate", bd)
-            intent.putExtra("Bplace", bp)
-            intent.putExtra("Adress", adr)
-            startActivity(intent)
+            val name = nameEt?.text.toString()
+            val sex = sexEt?.text.toString()
+            val job = jobEt?.text.toString()
+            val number = numberEt?.text.toString()
+            val bd = bdEt?.text.toString()
+            val bp = bpEt?.text.toString()
+            val adr = adrEt?.text.toString()
 
 
-            //intent to start activity
+            inten<profilActivity>(this)
+            putextra("Name",name)
+            putextra("Sex", sex)
+            putextra("Job", job)
+            putextra("Number", number)
+            putextra("Bdate", bd)
+            putextra("Bplace", bp)
+            putextra("Adress", adr)
+            startActivity(start)
+
+
         }
     }
+
 }
